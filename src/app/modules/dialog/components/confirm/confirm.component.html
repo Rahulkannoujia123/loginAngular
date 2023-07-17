@@ -1,0 +1,8 @@
+<div class="confirm-container">
+  <h4>{{data.message}}</h4>
+  <p *ngIf="data?.message2"> {{data.message2 }} </p>
+  <div class="buttons">
+    <button mat-stroked-button  class="txt-success" (click)="onConfirm()"> {{data.yBtnTxt}} </button>
+    <button mat-stroked-button class="txt-danger" (click)="onCancel()"> {{data.nBtnTxt}} </button>
+  </div>
+</div>

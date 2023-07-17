@@ -1,0 +1,47 @@
+
+
+.dashboard-box {
+//   display: grid;
+//   grid-template-columns: repeat(3, 1fr);
+//  gap: 40px;
+
+  .dashboard-item {
+    height: 200px;
+    width: 100%;
+    position: relative;
+    border-radius: 21px;
+    display: grid;
+    place-items: center;
+
+    h2{
+        font-size: 45px;
+        color: black;
+    }
+
+    .bottom {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 3px;
+      position: absolute;
+      bottom: 0px;
+      width: 100%;
+      border-radius: 0px 0px 20px 20px;
+      height: 45px;
+      font-weight: bold;
+      color: rgb(0, 16, 96);
+    }
+  }
+}
+.dashboard-box{
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin: 40px 0;
+}
+.dashboard-box > *{
+  max-width: 250px;
+  padding: 20px;
+} 
+// .table__wrapper{}
+// .table__wrapper > *{}

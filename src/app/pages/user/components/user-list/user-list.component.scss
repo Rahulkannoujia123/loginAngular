@@ -1,0 +1,79 @@
+
+$danger-color: #DD4445;
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+// table{
+//   th{
+//     background-color: #fff;
+//     color: #000!important;
+//   }
+//   tr{
+//     background-color: #fff;
+//   }
+// }
+
+
+
+
+::ng-deep mat-tooltip-component .mat-tooltip.custom-tooltip {
+  background: #055d65;
+}
+
+
+
+.view-btn {
+  background-color: inherit;
+  outline: none;
+  cursor: pointer;
+   //color: $info-color;
+  // border: 0.1rem solid $info-color;
+}
+
+.action {
+  button {
+    background-color: green($color: #000000);
+    outline: none;
+    border: 0.1rem solid $danger-color;
+    border-radius: 0.9rem;
+    margin-left: 1rem;
+    cursor: pointer;
+  }
+}
+.menu{
+  background-color: #fff !important;
+}
+.toolbar-table-header{
+  background-color: #fff;
+}
+.data-row {
+  position: relative;
+
+  td {
+    position: relative;
+    text-align: center;
+  }
+}
+
+table tr{
+  background-color: #fff;
+  th {
+    text-align: center;
+    color: rgb(0, 0, 0);
+  }
+
+  td{
+    color: #000;
+  }
+
+} 
+
+::ng-deep .mat-sort-header-container {
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  letter-spacing: normal;
+  outline: 0;
+  justify-content: center !important;
+}

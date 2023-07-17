@@ -1,0 +1,77 @@
+<!-- <mat-toolbar color="primary" class="example-toolbar">
+   <h1 class="example-app-name"></h1>
+  <span class="example-spacer"></span>
+</mat-toolbar> -->
+
+<mat-drawer-container>
+  <mat-drawer #drawer [mode]="mode" [opened]="opened" class="drawer bg-primary">
+    <div class="logo-box bg-primary">
+      <span class="title">
+        <img src="assets/images/logo.png" />
+      </span>
+    </div>
+    <!-- <hr> -->
+    <div class="menu bg-primary">
+      <mat-list>
+        <mat-list-item class="menu-item" routerLink="{{dashboardRoute.url}}" routerLinkActive="menu-item-active"
+          routerLinkActive="menu-item-active">
+         <div class="icon-wrap">
+          <mat-icon mat-list-icon>dashboard</mat-icon>
+          <div mat-line>Dashboard</div>
+         </div>
+          <div class="active-circle"></div>
+        </mat-list-item>
+       
+        
+        <mat-list-item class="menu-item" routerLink="{{individualuserRoute.url}}" routerLinkActive="menu-item-active">
+          <div class="icon-wrap">
+          <mat-icon mat-list-icon>supervised_user_circle</mat-icon>
+          <div mat-line>Individual Management</div>
+        </div>
+        
+          <div class="active-circle"></div>
+        </mat-list-item>
+        <mat-list-item class="menu-item" routerLink="{{itemManagementRoute.url}}" routerLinkActive="menu-item-active">
+          <div class="icon-wrap">
+          <mat-icon mat-list-icon>supervised_user_circle</mat-icon>
+          <div mat-line>Item Management</div>
+        </div>
+        
+          <div class="active-circle"></div>
+        </mat-list-item>
+        <mat-list-item class="menu-item" routerLink="{{changePasswordRoute.url}}" routerLinkActive="menu-item-active">
+          <div class="icon-wrap">
+         <mat-icon mat-list-icon>fingerprint</mat-icon>
+        <div mat-line>Change Password</div>
+      </div>
+      <div class="active-circle"></div>
+        </mat-list-item>
+
+        <mat-list-item class="menu-item" routerLinkActive="menu-item-active" (click)="logOut()">
+        <div class="icon-wrap">
+          <mat-icon mat-list-icon>logout</mat-icon>
+          <div mat-line>Logout</div>
+        </div>
+        </mat-list-item>
+
+      </mat-list>
+    </div>
+  </mat-drawer>
+  <mat-drawer-content class="drawer-content">
+    <mat-toolbar  class="header bg-primary">
+
+      <mat-toolbar-row>
+        <button mat-icon-button *ngIf="mode==='over'" (click)="drawer.toggle()">
+          <mat-icon>menu</mat-icon>
+        </button>
+        {{HeaderText| uppercase}}
+      </mat-toolbar-row>
+    </mat-toolbar>
+    <mat-divider></mat-divider>
+    <div class="drawer-content-box">
+      <router-outlet></router-outlet>
+    </div>
+
+  </mat-drawer-content>
+
+</mat-drawer-container>

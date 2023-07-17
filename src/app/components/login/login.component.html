@@ -1,0 +1,34 @@
+<div class="login-container bg-gradient">
+  <div class="login-box mat-elevation-z8">
+    <h1><span class="txt-primary">Log</span> <span class="txt-accent">In</span></h1>
+    <form [formGroup]="loginForm" [style.opacity]="isLoading?'0.4':'1'">
+      <mat-form-field appearance="outline">
+        <mat-label>Email : </mat-label>
+        <mat-icon matPrefix>mail</mat-icon>
+        <input type="email" matInput formControlName="email" placeholder="email" required>
+        <mat-error> {{loginForm.controls['email'].errors|validate:'Email '}} </mat-error>
+        <mat-error *ngIf="loginForm.controls['email'].errors && loginForm.controls['email'].errors['email']"> Not a valid email </mat-error>
+      </mat-form-field>
+      <br>
+    <mat-form-field appearance="outline">
+        <mat-label>Password : </mat-label>
+        <mat-icon matPrefix>lock_outline</mat-icon>
+        <input [type]="hide?'password':'text'" matInput formControlName="password" placeholder="enter password" required>
+        <mat-icon matSuffix (click)="hide = !hide" style="cursor: pointer;">
+          {{ hide ? "visibility" : "visibility_off" }}
+        </mat-icon>
+        <mat-error> {{loginForm.controls['password'].errors|validate:'Password '}} </mat-error>
+      </mat-form-field>
+      <br>
+      
+      <button type="submit" mat-raised-button color="primary" (click)="login()" >Login</button>
+    </form>
+    <!-- <button type="button" mat-button class="txt-accent">
+      Forgot Password</button> -->
+      <button mat-stroked-button color="accent" class="btn-block" routerLink="/forgot-password">ForgotPassword</button>
+
+    <div class="loader" *ngIf="isLoading">
+      <mat-spinner color="accent" [strokeWidth]="5"></mat-spinner>
+    </div>
+  </div>
+</div>

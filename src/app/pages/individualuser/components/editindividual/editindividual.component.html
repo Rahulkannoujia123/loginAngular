@@ -1,0 +1,31 @@
+
+<div class="content-box-start"></div>
+<div class="edit-individualuser">
+    <div class="head-part">
+        <h2>Edit IndividualUser</h2>
+        <!-- <button mat-icon-button color="warn" (click)="closeDialog()"></button>   -->
+    </div>
+   
+        </div>
+        <form [formGroup]="editIndividualUserForm">
+        <div class="flex-input-detail">
+            <div class="input-detail">
+                <label>Name of the Representative</label>
+                <input class="input-form" type="text" formControlName="name" placeholder="Enter User Name">
+            </div>
+            <div class="input-detail">
+                <label>Email</label>
+                <input class="input-form" type="text" formControlName="email" placeholder="Enter Email">
+            </div>
+            <div class="input-detail">
+                <label>Mobile Number</label>
+                <input class="input-form" type="text" formControlName="phoneNumber" placeholder="Mobile Number">  
+            </div>
+        </div>
+      
+        <div class="buttons">
+            <button class="btn-submit" (click)="editIndividualUser()">Submit</button>
+            <button class="btn-cancel" (click)="closeDialog()">Cancel</button>
+        </div>
+    
+  </form>
